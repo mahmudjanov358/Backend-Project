@@ -4,8 +4,8 @@ const userSchema = new Schema({
   username: { type: String, required: true, unique: true, trim: true },
   name: { type: String, trim: true, default: "" },
   lastName: { type: String, trim: true, default: "" },
-  phone: { type: String, unique: true },
-  email: { type: String, unique: true },
+  phone: { type: String },
+  email: { type: String },
   address: { type: String, default: "" },
   photo: { type: String },
 });
