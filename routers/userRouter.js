@@ -1,9 +1,15 @@
-const { Router } = require("express");
-const user = Router();
+const { Router } = require("express"); // ----------Router
+const user = Router(); // ----------User
 
-const { postUser, getUser } = require("../controllers/user.controller");
+const {
+  postUser,
+  getUser,
+  getUserById,
+} = require("../controllers/user.controller"); // ----------Controllers
 
+// ----------Paths
 user.post("/postUser", postUser);
 user.get("/getUser", getUser);
+user.get("/getUserById/:id", getUserById);
 
-module.exports = { user };
+module.exports = { user }; // ----------Exports
