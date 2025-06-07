@@ -24,6 +24,9 @@ connectToDB();
 const { user } = require("./routers/userRouter");
 app.use("/user", user);
 
+const { product } = require("./routers/productRouter");
+app.use("/product", product);
+
 // Server
 const PORT = process.env.PORT || 1000;
 app.listen(PORT, () => {
