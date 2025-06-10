@@ -23,7 +23,6 @@ connectToDB();
 // Routers
 const { user } = require("./routers/userRouter");
 app.use("/user", user);
-
 const { product } = require("./routers/productRouter");
 app.use("/product", product);
 
